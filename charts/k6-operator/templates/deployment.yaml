@@ -10,6 +10,7 @@ metadata:
     {{- include "k6-operator.customLabels" . | default "" | nindent 4 }}
   annotations:
     {{- include "k6-operator.customAnnotations" . | default "" | nindent 4 }}
+    
 spec:
   replicas: {{ .Values.manager.replicas }}
   selector:
